@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import math
-import matplotlib.pyplot as plt
 
 st.title("💰 Kalkulator Rp2.000 Jadi Rp1 Miliar")
 st.write("Simulasi pertumbuhan modal dengan margin keuntungan konsisten.")
@@ -32,11 +31,6 @@ df = pd.DataFrame(data)
 # Tampilkan tabel
 st.dataframe(df)
 
-# Plot grafik
+# Plot grafik dengan bawaan Streamlit
 st.subheader("📈 Grafik Pertumbuhan Modal")
-fig, ax = plt.subplots()
-ax.plot(df["Langkah"], df["Modal (Rp)"], marker="o")
-ax.set_xlabel("Langkah")
-ax.set_ylabel("Modal (Rp)")
-ax.set_title("Pertumbuhan Modal")
-st.pyplot(fig)
+st.line_chart(df.set_index("Langkah"))
