@@ -19,19 +19,3 @@ steps = math.ceil(n)
 st.subheader("📊 Hasil Perhitungan")
 st.write(f"Untuk modal awal **Rp{C0:,}** dengan margin **{margin}%**, "
          f"butuh sekitar **{steps} langkah** untuk mencapai Rp{target:,}.")
-
-# Tampilkan grafik pertumbuhan modal
-st.subheader("📈 Grafik Pertumbuhan Modal")
-st.line_chart(edited_df.set_index("Langkah")["Modal (Rp)"])
-
-# --- Download Section ---
-st.subheader("📥 Download Hasil Simulasi")
-
-# Download CSV
-csv = edited_df.to_csv(index=False).encode('utf-8')
-st.download_button(
-    label="⬇️ Download sebagai CSV",
-    data=csv,
-    file_name="simulasi_modal.csv",
-    mime="text/csv",
-)
