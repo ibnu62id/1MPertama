@@ -7,8 +7,8 @@ st.title("💰 Kalkulator")
 st.subheader("Rp2.000 Jadi Rp1 Miliar")
 
 # Input dari user
-C0 = st.number_input("Modal awal (Rp)", min_value=100, value=2000, step=100)
-target = st.number_input("Target pendapatan (Rp)", min_value=1000000, value=1000000000, step=1000000)
+C0 = st.number_input("Modal awal (Rp)", min_value=100, value=2000, step=100, format="%,d")
+target = st.number_input("Target pendapatan (Rp)", min_value=1000000, value=1000000000, step=1000000, format="%,d")
 margin = st.slider("Margin keuntungan per transaksi (%)", 1, 100, 10)
 
 # Hitung jumlah langkah
