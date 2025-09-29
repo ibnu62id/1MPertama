@@ -4,7 +4,6 @@ import math
 from io import BytesIO
 
 st.title("💰 Kalkulator Rp2.000 Jadi Rp1 Miliar")
-st.write("Simulasi pertumbuhan modal dengan margin keuntungan konsisten + daftar produk.")
 
 # Input dari user
 C0 = st.number_input("Modal awal (Rp)", min_value=100, value=2000, step=100)
@@ -17,5 +16,5 @@ n = math.log(target/C0, growth_factor)
 steps = math.ceil(n)
 
 st.subheader("📊 Hasil Perhitungan")
-st.write(f"Untuk modal awal **Rp{C0:,}** dengan margin **{margin}%**, "
-         f"butuh sekitar **{steps} langkah** untuk mencapai Rp{target:,}.")
+st.write(f"Idealnya, dengan modal awal **Rp{C0:,}** dan margin **{margin}%**, "
+         f"Anda hanya perlu **{steps} step** untuk mencapai Rp{target:,}.")
