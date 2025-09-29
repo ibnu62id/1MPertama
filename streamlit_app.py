@@ -4,7 +4,7 @@ import math
 from io import BytesIO
 
 st.title("💰 Kalkulator")
-st.title("Rp2.000 Jadi Rp1 Miliar")
+st.subheader("Rp2.000 Jadi Rp1 Miliar")
 
 # Input dari user
 C0 = st.number_input("Modal awal (Rp)", min_value=100, value=2000, step=100)
