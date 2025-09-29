@@ -16,5 +16,5 @@ growth_factor = 1 + (margin/100)
 n = math.log(target/C0, growth_factor)
 steps = math.ceil(n)
 
-st.subheader(f"📊 Idealnya, dengan modal awal **Rp{C0:,}** dan margin **{margin}%**, "
+st.subheader(f"👨‍💻 Idealnya, dengan modal awal **Rp{C0:,}** dan margin **{margin}%**, "
          f"Anda hanya perlu **{steps} hari** untuk mencapai Rp{target:,}.")
